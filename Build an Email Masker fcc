@@ -1,0 +1,19 @@
+
+function maskEmail(email) {
+  let emailMasked = '';
+  emailMasked =
+   email[0]
+   + '*'.repeat(email.indexOf('@') -2)
+   + email[email.indexOf('@')-1]
+   + email.slice(email.indexOf('@'))
+
+  return emailMasked
+}
+
+let email = 'aasds@email.com'
+
+console.log(maskEmail(email))
+
+
+
+https://www.freecodecamp.org/learn/full-stack-developer/lab-email-masker/build-an-email-masker
